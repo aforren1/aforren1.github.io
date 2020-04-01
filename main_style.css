@@ -1,0 +1,119 @@
+:root {
+    --col: #638aad;
+}
+
+/* font stack: https://www.cssfontstack.com/Trebuchet-MS */
+/* adapted from https://github.com/morgan3d/markdeep/blob/master/1.093/website.css */
+
+body#md {
+    position: absolute;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    left: 200px;
+    right: 0px;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    color: rgb(63, 63, 63);
+    font-size: 16px;
+    padding-right: 20px;
+    overflow-x: hidden;
+    text-overflow: ellipses;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.md .longTOC {
+    width: 170px;
+    display: block;
+    border-right: 3px solid var(--col);
+    overflow-y: scroll;
+    font-size: 16px;
+    font-family: inherit;
+    background: #FFF;
+    position: absolute;
+    top: 90px;
+    left: -190px;
+    bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.scrolled .md .longTOC {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    border-left: 10px solid #fff;
+}
+
+/* no numbering of headings */
+
+.md h1:before, .md h2:before, .md h3:before, .md h4:before, .md h5:before, .md h6:before {
+    content: none;
+}
+
+.md .longTOC a {
+    color: #000;
+}
+
+.md .tocHeader, .md .tocNumber {
+    display: none;
+}
+
+.md a, .md div.title, contents, .md .tocHeader, .md h1, .md h2, .md h3, .md h4, .md h5, .md h6, .md .nonumberh1, .md .nonumberh2, .md .nonumberh3, .md .nonumberh4, .md .nonumberh5, .md .nonumberh6, .md .shortTOC, .md .mediumTOC, .md .longTOC {
+    font-family: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+}
+
+.md div.title, .md h1, .md h2, .md h3, .md h4 {
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
+    color: var(--col);
+    border-color: inherit;
+}
+
+.md h1 {
+    font-size: 23px;
+}
+
+.md h2, .md h3, .md h4 {
+    border: none;
+    font-size: 17px;
+}
+
+.md .tocTop {
+    display: inline;
+}
+
+.md div.title, .md div.subtitle {
+    text-align: left;
+}
+
+.md div.title {
+    position: absolute;
+    top: -14px;
+    left: -200px;
+    right: 0px;
+    font-weight: 900;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-shadow: 0px 0px 3px var(--col);
+    background-color: var(--col);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    color: #fff;
+    font-size: 45px;
+    z-index: 10;
+}
+
+.md div.afterTitles {
+    height: 90px;
+}
