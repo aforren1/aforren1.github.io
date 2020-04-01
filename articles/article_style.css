@@ -5,14 +5,26 @@
    and tweaked by Morgan McGuire.
    Licensed as public domain or BSD 2-clause, whichever is more convenient for you.
    Originally from https://github.com/aras-p/markdeep-docs-style */
-   body#md {
+
+body#md {
     position: absolute;
-    left: 200px;
     max-width: none;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
     margin: 0;
     padding-right: 20px;
+}
+
+@media screen and (min-width: 64em) {
+    body#md {
+        left: 200px;
+    }
+}
+
+@media screen and (max-width: 64em) {
+    body#md {
+        left: 0px;
+    }
 }
 
 /* if screen is wide enough, put table of contents on the right side */
@@ -38,14 +50,14 @@
 }
 
 /* for narrow screens or print, hide table of contents */
-/* @media screen and (max-width: 64em) {
+@media screen and (max-width: 64em) {
     .md .longTOC, .md .mediumTOC, .md .shortTOC { display: none; }
 }
 
 @media print {
     .md .longTOC, .md .mediumTOC, .md .shortTOC { display: none; }
     body { max-width: 100%; }
-} */
+}
 
 /* reset heading/link fonts to that of body */
 .md a,
